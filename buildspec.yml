@@ -1,4 +1,4 @@
-version: 0.2
+version: 3
 
 phases:
   pre_build:
@@ -11,8 +11,5 @@ phases:
   post_build:
     commands:
       - npm run Docker-compose down    
-reports:
-  Selenium:
-    file-format: Allure report
-    files:
+
      

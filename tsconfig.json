@@ -6,6 +6,7 @@
         "module": "commonjs",
         "removeComments": true,
         "noImplicitAny": false,
+        "typeRoots": ["./types"],
         "strictPropertyInitialization": true,
         "strictNullChecks": true,
         "types": [
