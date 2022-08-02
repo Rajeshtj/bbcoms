@@ -11,7 +11,7 @@
     "docker-down": "Docker-compose down",
     "multi-browser": "npm run report-ci && npx wdio config/wdio.conf.cross-browser.ts && npm run allure-report",
     "lint": "eslint config tests",
-    "allure-report": "allure generate ./_results_/allure-raw --clean && allure open",
+    "allure-report": "allure generate ./_results_/allure-raw --clean",
     "report-ci": "allure generate ./_results_/allure-raw --clean -o allure-report",
     "delete": "del-cli --force ./Reports/**.html"
     

@@ -1,4 +1,4 @@
-import { multipleBrowserCapabilities } from "./capabilities";
+import { chromeCapabilities } from "./capabilities";
 import log from '@wdio/logger';
 //import { addObject, addScreenshot } from '../src/commonkeywords/lib/context';
 
@@ -34,7 +34,7 @@ export const config: WebdriverIO.Config = {
     // Capabilities
     // ============
     maxInstances: 3,
-    capabilities: multipleBrowserCapabilities,
+    capabilities: chromeCapabilities,
     // ===================
     // Test Configurations
     // ===================
