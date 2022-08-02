@@ -1,15 +1,12 @@
-version: 3
+version: 0.2
 
 phases:
+  
   pre_build:
     commands:
+      - docker-compose up -d
       - npm install
-      - npm run Docker-compose up 
+      
   build:
     commands:
-      - npm run test
-  post_build:
-    commands:
-      - npm run Docker-compose down    
-
-     
+      - npm run test-docker

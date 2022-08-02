@@ -12,7 +12,6 @@ import { AccountTestData } from '../../data/AccountsTestCaseData';
 import enter from '../helpers/action/enter';
 const loginPageObjects = require('../pageobjects/loginPageObject.json');
 import { expect } from 'chai';
-import lighthouse from '../helpers/action/lighthouse';
 
 
 
