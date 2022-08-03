@@ -1,0 +1,77 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Login to the Application as Support User and Create an Account",
+    "children" : [ {
+      "name" : "#SMOKE Create Account without the required fields (Staff ID, First Name, Last Name, School) updated",
+      "uid" : "9cc1853eb192b439",
+      "parentUid" : "9eaf7acdadd06b79a9e077a09fb276e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658296753153,
+        "stop" : 1658296785665,
+        "duration" : 32512
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 1,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-98.0.4758.102" ]
+    }, {
+      "name" : "#SMOKE Create Account without the required fields (Staff ID, First Name, Last Name, School) updated",
+      "uid" : "fcdb87f0e7f4aadb",
+      "parentUid" : "9eaf7acdadd06b79a9e077a09fb276e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658296757315,
+        "stop" : 1658296784898,
+        "duration" : 27583
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 1,
+      "retriesStatusChange" : false,
+      "parameters" : [ "firefox-97.0.1" ]
+    }, {
+      "name" : "#TEST #SMOKE Create New Account",
+      "uid" : "cac8b991d52aa237",
+      "parentUid" : "9eaf7acdadd06b79a9e077a09fb276e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658296784898,
+        "stop" : 1658296824834,
+        "duration" : 39936
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 1,
+      "retriesStatusChange" : false,
+      "parameters" : [ "firefox-97.0.1" ]
+    }, {
+      "name" : "#TEST #SMOKE Create New Account",
+      "uid" : "d263cac1db7f9823",
+      "parentUid" : "9eaf7acdadd06b79a9e077a09fb276e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658296785665,
+        "stop" : 1658296826125,
+        "duration" : 40460
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 1,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-98.0.4758.102" ]
+    } ],
+    "uid" : "9eaf7acdadd06b79a9e077a09fb276e6"
+  } ]
+}
