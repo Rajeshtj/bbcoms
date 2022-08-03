@@ -22,7 +22,7 @@ export const config: WebdriverIO.Config = {
     // Specify Test Files
     // ==================
     specs: [
-        './src/specs/Accounts/**.spec.ts',
+        './src/specs/Accounts/test.spec.ts',
     ],
     exclude: [],
 

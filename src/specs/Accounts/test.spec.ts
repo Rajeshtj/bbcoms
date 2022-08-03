@@ -6,7 +6,7 @@ import lighthouse from '../../helpers/action/lighthouse';
 
 describe('Login to the Application as Support User and Create an Account', () => {
    
-   it ('#SMOKE Create Account without the required fields (Staff ID, First Name, Last Name, School) updated', async () => {     
+   it ('#TEST Create Account without the required fields (Staff ID, First Name, Last Name, School) updated', async () => {     
     //Alert
        console.log("Testing123");
     });
