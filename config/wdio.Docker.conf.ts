@@ -60,7 +60,7 @@ export const config: WebdriverIO.Config = {
     //   videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
     // }],
     ['allure', {
-      outputDir: './_results_/allure-raw',
+      outputDir: './results/allure-raw',
       disableWebdriverStepsReporting: false,
       disableWebdriverScreenshotsReporting: false,
     }],
