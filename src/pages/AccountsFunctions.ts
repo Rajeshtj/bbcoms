@@ -1,7 +1,8 @@
 import clickElement from '../helpers/action/clickElement';
 import clearInputField from '../helpers/action/clearInputField';
 import setValue from '../helpers/action/setInputField';
-import WaitForExist from '../helpers/action/WaitForExist';
+import WaitForExist from '../helpers/action/waitForExist';
+
 import WaitForClickable from '../helpers/action/waitForClickable';
 import AcceptAlert from '../helpers/action/acceptAlert';
 import selectOption from '../helpers/action/selectOption';
