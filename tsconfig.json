@@ -15,10 +15,11 @@
             "@wdio/mocha-framework",
             "expect-webdriverio",
             "@wdio/sauce-service",
+            "@wdio/devtools-service"
         ]
     },
     "include": [
         "./config/**/*.ts",
-        "src/**/*.ts"
+        "src/**/**/*.ts"
     ]
 }
