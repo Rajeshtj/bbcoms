@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//*[@id='id_external_id']"
-}
