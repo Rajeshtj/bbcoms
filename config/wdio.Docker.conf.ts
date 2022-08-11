@@ -54,15 +54,15 @@ export const config: WebdriverIO.Config = {
     specFileRetries: 0,
     specFileRetriesDelay: 0,
     specFileRetriesDeferred: false,
-    reporters: [
-    [video, {
-      saveAllVideos: true,       // If true, also saves videos for successful test cases
-      videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-    }],
+    reporters: ['spec',
+    // [video, {
+    //   saveAllVideos: true,       // If true, also saves videos for successful test cases
+    //   videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+    // }],
     ['allure', {
       outputDir: './results/allure-raw',
-      disableWebdriverStepsReporting: true,
-      disableWebdriverScreenshotsReporting: true,
+      disableWebdriverStepsReporting: false,
+      disableWebdriverScreenshotsReporting: false,
     }],
   ],
     
