@@ -2,12 +2,14 @@ import LoginToBBcoms from '../../pages/LoginToBBcoms';
 const data = require('../../../data/env.json');
 import ReportsFunctions from '../../pages/ReportsFunctions';
 const ReportsPageObjects = require('../../pageobjects/ReportsPageObjects.json');
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 describe('All Report Generate, Email and Download as a support user', () => {
     before('Login to the Application as Support user', async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await browser.pause(5000);
         await browser.refresh();
     });

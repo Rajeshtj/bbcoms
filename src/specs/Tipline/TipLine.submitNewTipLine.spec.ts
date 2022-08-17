@@ -8,14 +8,16 @@ import clickElement from '../../helpers/action/clickElement';
 import selectOption from '../../helpers/action/selectOption';
 import { OrganizationTestData } from '../../../data/OrganizationTestCaseData';
 const data = require('../../../data/env.json');
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 describe('Login to the Application as Support User and Submit a New Tipline', () => {
     let subjectAndTextValue: string[];
 
     before('Login to bbcomms applications as Support User and Navigate to Settings page',async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await LoginToBBcoms.navigateToPages('Settings');
     });
 

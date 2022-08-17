@@ -24,15 +24,17 @@ import CommonFunction from '../../pages/CommonFunctions';
 import OutBoxFunctions from '../../pages/OutBoxFunctions';
 import { testData } from '../../../data/SendTestCaseData';
 import randomInt from '../../helpers/action/randomInt';
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 // Actual test scenarios
 describe('Login to the Application as Support User and Post Headlines and Announcement in WCM', () => {
     let subjectAndTextValue: string[];
 
     before('Login to bbcomms applications with valid credentials', async() => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await LoginToBBcoms.navigateToPages('Messages');
     });
 

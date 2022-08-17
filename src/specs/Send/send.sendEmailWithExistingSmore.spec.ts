@@ -15,6 +15,8 @@ import AccountsFunctions from '../../pages/AccountsFunctions';
 import fs = require('fs');
 import log from '@wdio/logger';
 const logger = log('@automation');
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 // Actual test scenarios
 describe('Login to the Application as Support User and send Message using Smore Template Email all', () => {
@@ -22,9 +24,9 @@ describe('Login to the Application as Support User and send Message using Smore 
     const subject = testData.EmailMessageSubject.concat(`with Existing Smore ${date}`);
 
     before('Login to the Application as Support User', async() => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
     })
 
     it('Navigate to Emil and Select Existing Smore', async() => {

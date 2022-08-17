@@ -37,6 +37,8 @@ import selectOption from '../../helpers/action/selectOption';
 const SendPageObjects = require('../../pageobjects/SendPageObjects.json');
 import { testData } from '../../../data/SendTestCaseData';
 const HomePageObjects = require('../../pageobjects/HomePageObject.json');
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 // Actual test scenarios
 describe('Login to the Application as Support User and send Message with different languages using All Delivery methods', () => {
@@ -44,9 +46,9 @@ describe('Login to the Application as Support User and send Message with differe
     let subjectAndTextValue: string[];
 
     before('Login to the Application as Support User and Navigate to Message Menu', async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await LoginToBBcoms.navigateToPages('Messages');
     })
 

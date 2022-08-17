@@ -3,12 +3,14 @@ const HomePageObjects = require('../../pageobjects/HomePageObject.json');
 const data = require('../../../data/env.json');
 import WaitForExist from '../../helpers/action/waitForExist';
 import LoginToBBcoms from '../../pages/LoginToBBcoms';
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 describe('Login to the Application as Support User and Add Data Source', () => {
     before('Login to the application as Support User and Navigate to Import Menu', async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await browser.pause(5000);
         await browser.refresh();
         if (!$(HomePageObjects.Menus.ImportsMenu.xpath).isClickable()) {

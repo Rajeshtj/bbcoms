@@ -18,14 +18,16 @@ import { FeedTestData } from '../../../data/FeedTestCasedata';
 const data = require('../../../data/env.json');
 import WaitForExist from '../../helpers/action/WaitForExist';
 import LoginToBBcoms from '../../pages/LoginToBBcoms';
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 // Actual test scenarios
 describe('Login to the Application as Support User and Add Twitter Feeds', () => {
 
     before('Login to the Application as Support user and Navigate to Settings', async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await LoginToBBcoms.navigateToPages('Settings');
 
     });

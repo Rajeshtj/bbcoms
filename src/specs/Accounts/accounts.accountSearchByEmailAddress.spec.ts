@@ -3,12 +3,14 @@ const AccountsPageObjects = require('../../pageobjects/AccountsPageObjects.json'
 import { expect } from 'chai';
 import AccountsFunctions from '../../pages/AccountsFunctions';
 import LoginToBBcoms from '../../pages/LoginToBBcoms';
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 describe('Login to the Application as Support User and search Account', () => {
     before(' Login to the application as Support User and Navigate to Accounts Menu',async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await LoginToBBcoms.navigateToPages('Accounts', 'Manage Accounts');
     });
     it('#SMOKE Seach Account by invalid email address', async () => {

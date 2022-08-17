@@ -3,7 +3,8 @@ import OutBoxFunctions from '../../pages/OutBoxFunctions';
 import { GroupsTestData } from '../../../data/GroupsTestCaseData';
 import LoginToBBcoms from '../../pages/LoginToBBcoms';
 const data = require('../../../data/env.json');
-
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 
 
@@ -13,9 +14,9 @@ describe('Login to the Application as Support User and Create Query Group', () =
     let subjectAndTextValue: string[];
 
     before('Login to the Application as Support User', async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
     })
 
     it('Navigate to Groups and Create Query Group',async () => {

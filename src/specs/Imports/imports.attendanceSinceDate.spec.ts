@@ -7,12 +7,14 @@ const data = require('../../../data/env.json');
 import WaitForExist from '../../helpers/action/waitForExist';
 import LoginToBBcoms from '../../pages/LoginToBBcoms';
 let createdImportName: string;
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 describe('Verify able to create attendance since date automated message', () => {
     before('Login to the application as Support User and Navigate to Import Menu', async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await browser.pause(5000);
         await browser.refresh();
         if (!$(HomePageObjects.Menus.ImportsMenu.xpath).isClickable()) {

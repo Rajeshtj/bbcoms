@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660729042771' stop='1660729050822'>
+    <name>Login to the Application as Support User and Create an Account</name>
+    <title>Login to the Application as Support User and Create an Account</title>
+    <test-cases>
+        <test-case start='1660729042771' status='broken' stop='1660729050821'>
+            <name>"before all" hook for Login to the Application as Support User and Create an Account</name>
+            <title>"before all" hook for Login to the Application as Support User and Create an Account</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.79'/>
+            </parameters>
+            <steps>
+                <step start='1660729042773' status='passed' stop='1660729045225'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='e04dcd55-619d-4d74-b809-bf655f8a598e-attachment.json' type='application/json' size='50'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660729045225' status='passed' stop='1660729045390'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='bfe27414-077f-4c4e-8a42-e3fc95b293e3-attachment.json' type='application/json' size='57'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660729045392' status='passed' stop='1660729045421'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='247e26eb-94d0-4f91-8302-8123bf5a40c8-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='e3f8bffa-f116-4e30-b0d8-e6819b1b938a-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660729045427' status='passed' stop='1660729045458'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='b213af3f-e292-4890-8608-17651d0e066e-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='e47a6955-24cf-4209-863e-91eaf9f3a3ab-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660729045458' status='passed' stop='1660729045475'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e89220b9-68a3-4d84-9ec3-a73b31b77342-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='dd68750f-0a46-43c8-8b52-7566d464441b-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660729045478' status='passed' stop='1660729045528'>
+                    <name>POST /session/:sessionId/element/ea7b9353-8288-480d-8299-b57e5267f070/clear</name>
+                    <title>POST /session/:sessionId/element/ea7b9353-8288-480d-8299-b57e5267f070/clear</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660729045533' status='passed' stop='1660729045623'>
+                    <name>POST /session/:sessionId/element/ea7b9353-8288-480d-8299-b57e5267f070/value</name>
+                    <title>POST /session/:sessionId/element/ea7b9353-8288-480d-8299-b57e5267f070/value</title>
+                    <attachments>
+                        <attachment title='Request' source='4bd76f90-6e64-4141-8591-45cc66d43381-attachment.json' type='application/json' size='29'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660729050624' status='broken' stop='1660729050821'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='a138b55d-6f43-4c68-b999-99a5fc23288a-attachment.json' type='application/json' size='62'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>no such window: window was already closed
+                  (Session info: chrome=104.0.5112.79)</message>
+                <stack-trace>no such window: no such window: window was already closed
+                  (Session info: chrome=104.0.5112.79)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async exports.default (/Users/rtj/Desktop/bbcoms-web/bbcoms-web-ui/src/helpers/check/isDisplayed.ts:13:5)
+                    at async LoginToBBcoms.login (/Users/rtj/Desktop/bbcoms-web/bbcoms-web-ui/src/pages/LoginToBBcoms.ts:18:9)
+                    at async Context.&lt;anonymous> (/Users/rtj/Desktop/bbcoms-web/bbcoms-web-ui/src/specs/Accounts/accounts.accountCreateAndEdit.spec.ts:18:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

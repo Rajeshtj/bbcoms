@@ -1,7 +1,5 @@
 import { chromeCapabilities } from "./capabilities";
 import log from '@wdio/logger';
-//import { addObject, addScreenshot } from '../src/commonkeywords/lib/context';
-
 const logger = log('@automation');
 logger.info('Starting tests...');
 const video = require('wdio-video-reporter');
@@ -22,13 +20,13 @@ export const config: WebdriverIO.Config = {
     // Specify Test Files
     // ==================
     specs: [
-        './src/specs/Accounts/accounts.accountCreateAndEdit.spec.ts',
+        './src/specs/Accounts/test.spec.ts',
     ],
     exclude: [],
 
     
     suites: {
-        smoke: ['./src/web/specs/**/*.ts'],
+        smoke: ['./src/web/specs/Accounts/accounts.accountCreateAndEdit.spec.ts'],
     },
     // ============
     // Capabilities

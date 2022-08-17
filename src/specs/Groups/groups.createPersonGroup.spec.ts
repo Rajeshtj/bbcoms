@@ -5,14 +5,16 @@ import GroupsFunctions from '../../pages/GroupsFunctions';
 import OutBoxFunctions from '../../pages/OutBoxFunctions';
 import clickElement from '../../helpers/action/clickElement';
 import { GroupsTestData } from '../../../data/GroupsTestCaseData';
+import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 describe('Login to the Application as Support User and Create Person Group', () => {
     let subjectAndTextValue: string[];
 
     before('Login to the Application as Support User', async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
     })
 
     it('Navigate to Groups and create Person Group', async () => {

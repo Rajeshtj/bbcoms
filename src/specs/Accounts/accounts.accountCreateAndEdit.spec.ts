@@ -3,25 +3,28 @@ import AccountsFunctions from '../../pages/AccountsFunctions';
 const data = require('../../../data/env.json');
 import { AccountTestData } from '../../../data/AccountsTestCaseData';
 import lighthouse from '../../helpers/action/lighthouse';
+const { url, user, password } = require('../../../data/env_data')
 
 describe('Login to the Application as Support User and Create an Account', () => {
     const lastNameWithApostrophe = `Parent's`;
     before('Login to the application as Support User and Navigate to Accounts Menu',async () => {
-        await LoginToBBcoms.openBBCommsURL(data.qa.url);
+        await browser.url(url)
         const str1 = await Promise.resolve(driver.getUrl());
         const str = await Promise.resolve(driver.getTitle());
         await lighthouse(str1,str);
-        //commonFunction.lighthouse();
         await browser.maximizeWindow()
-        await LoginToBBcoms.login(data.qa.supportUserName,data.qa.supportPassword);
+        await LoginToBBcoms.login(user,password);
         await LoginToBBcoms.navigateToPages('Accounts', 'Manage Accounts');
     });
-   it ('#SMOKE Create Account without the required fields (Staff ID, First Name, Last Name, School) updated', async () => {     //Alert
+   it ('#TEST #SMOKE Create Account without the required fields (Staff ID, First Name, Last Name, School) updated', async () => {     //Alert
+        const str1 = await Promise.resolve(driver.getUrl());
+        const str = await Promise.resolve(driver.getTitle());
+        await lighthouse(str1,str);
         await browser.pause(2000)
-        await AccountsFunctions.withoutRequiredFields(AccountTestData.password,AccountTestData.password);
+        await AccountsFunctions.withoutRequiredFields(user,password);
     });
 
-    it('#TEST #SMOKE Create New Account', async () => {
+    it('#SMOKE Create New Account', async () => {
         
         const str1 = await Promise.resolve(driver.getUrl());
         const str = await Promise.resolve(driver.getTitle());

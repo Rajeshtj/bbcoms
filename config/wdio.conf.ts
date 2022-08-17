@@ -1,3 +1,23 @@
+// let baseUrl = (process.env.USE_PROD === 'true')
+//     ? 'https://spl9-pt99-2.parentlink.net'
+//     : 'https://spl9-pt99-2.parentlink.net/QA'
+
+// const dev = "https://spl9-pt99-2.parentlink.net/dev"
+// const qa = "https://spl9-pt99-2.parentlink.net"
+// const stage = "https://spl9-pt99-2.parentlink.net/stage"
+
+// let baseUrl: string;
+
+// if (process.env.ENV == 'DEV') { baseUrl = dev }
+// else if (process.env.ENV == 'QA') { baseUrl = qa }
+// else if (process.env.ENV == 'STAGE') { baseUrl = stage }
+// else {
+//     baseUrl = dev;
+//     console.log("Please pass correct ENV variable:: DEV | QA | STAGE")
+//     process.exit()
+// }  
+
+import { env } from "process";
 import { chromeCapabilities } from "./capabilities";
 
 
@@ -8,7 +28,7 @@ export const config: WebdriverIO.Config = {
     // ==================
     specs: [
         './src/specs/**/**.spec.ts',
-        //'./src/specs/Accounts/accounts.accountCreateAndEdit.spec.ts',
+        //'./src/specs/Accounts/test.spec.ts',
        
        
     ],
@@ -28,7 +48,7 @@ export const config: WebdriverIO.Config = {
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'error',
     bail: 0,
-    baseUrl: '',
+    baseUrl:'',
     waitforTimeout: 5000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 1,
